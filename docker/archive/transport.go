@@ -63,6 +63,7 @@ func ParseReference(refString string) (types.ImageReference, error) {
 		if err != nil {
 			return nil, errors.Wrapf(err, "docker-archive parsing reference")
 		}
+		fmt.Println("i am here")
 		ref = reference.TagNameOnly(ref)
 		refTagged, isTagged := ref.(reference.NamedTagged)
 		if !isTagged {
